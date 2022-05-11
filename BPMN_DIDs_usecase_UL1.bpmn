@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_3A40sLNCEDqU3NcN5ku3Yw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_SkippableInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_PriorityInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_CommentInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_DescriptionInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_CreatedByInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_TaskNameInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_GroupIdInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_ContentInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_NotStartedReassignInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_NotCompletedReassignInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_NotStartedNotifyInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_NotCompletedNotifyInputXItem" structureRef="Object"/>
-  <bpmn2:collaboration id="_EE7DFBED-EBB8-4A24-81C9-5F7CE9A20C1F" name="Default Collaboration">
-    <bpmn2:participant id="_A52C249D-855E-445A-852C-7B658379E0A1" name="Pool Participant" processRef="Untitled"/>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns:xsi="xsi" id="_aViOELNDEDqU3NcN5ku3Yw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:collaboration id="_B09C2636-D669-41D5-8830-A09E8056AD11" name="Default Collaboration">
+    <bpmn2:participant id="_DA27186D-A0AE-4CED-B7D5-148558621E18" name="Pool Participant" processRef="Untitled"/>
   </bpmn2:collaboration>
   <bpmn2:process id="Untitled" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="Untitled" isExecutable="true" processType="Public">
     <bpmn2:sequenceFlow id="_57F98462-F32F-42EA-8215-CEBD6EF2BE3A" sourceRef="_2D2F44AD-B19C-4557-B342-DC50963C9D9F" targetRef="_39AC801F-880F-4985-BF04-1B72D8C9CDCD"/>
@@ -21,7 +9,7 @@
     <bpmn2:endEvent id="_39AC801F-880F-4985-BF04-1B72D8C9CDCD">
       <bpmn2:incoming>_57F98462-F32F-42EA-8215-CEBD6EF2BE3A</bpmn2:incoming>
     </bpmn2:endEvent>
-    <bpmn2:userTask id="_2D2F44AD-B19C-4557-B342-DC50963C9D9F" name="Task">
+    <bpmn2:scriptTask id="_2D2F44AD-B19C-4557-B342-DC50963C9D9F" name="Task" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
           <drools:metaValue><![CDATA[Task]]></drools:metaValue>
@@ -29,29 +17,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_CA90B95E-CEB8-4BEC-8680-466286AC2280</bpmn2:incoming>
       <bpmn2:outgoing>_57F98462-F32F-42EA-8215-CEBD6EF2BE3A</bpmn2:outgoing>
-      <bpmn2:ioSpecification>
-        <bpmn2:dataInput id="_2D2F44AD-B19C-4557-B342-DC50963C9D9F_TaskNameInputX" drools:dtype="Object" itemSubjectRef="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_2D2F44AD-B19C-4557-B342-DC50963C9D9F_SkippableInputX" drools:dtype="Object" itemSubjectRef="__2D2F44AD-B19C-4557-B342-DC50963C9D9F_SkippableInputXItem" name="Skippable"/>
-        <bpmn2:inputSet>
-          <bpmn2:dataInputRefs>_2D2F44AD-B19C-4557-B342-DC50963C9D9F_TaskNameInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_2D2F44AD-B19C-4557-B342-DC50963C9D9F_SkippableInputX</bpmn2:dataInputRefs>
-        </bpmn2:inputSet>
-      </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation>
-        <bpmn2:targetRef>_2D2F44AD-B19C-4557-B342-DC50963C9D9F_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment>
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[Task]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_2D2F44AD-B19C-4557-B342-DC50963C9D9F_TaskNameInputX]]></bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation>
-        <bpmn2:targetRef>_2D2F44AD-B19C-4557-B342-DC50963C9D9F_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment>
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_2D2F44AD-B19C-4557-B342-DC50963C9D9F_SkippableInputX]]></bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-    </bpmn2:userTask>
+    </bpmn2:scriptTask>
     <bpmn2:startEvent id="_EAEABF29-7009-4693-8EC1-5BAC0705970D">
       <bpmn2:outgoing>_CA90B95E-CEB8-4BEC-8680-466286AC2280</bpmn2:outgoing>
     </bpmn2:startEvent>
@@ -112,7 +78,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_3A40sLNCEDqU3NcN5ku3Yw</bpmn2:source>
-    <bpmn2:target>_3A40sLNCEDqU3NcN5ku3Yw</bpmn2:target>
+    <bpmn2:source>_aViOELNDEDqU3NcN5ku3Yw</bpmn2:source>
+    <bpmn2:target>_aViOELNDEDqU3NcN5ku3Yw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
